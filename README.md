@@ -45,3 +45,30 @@
 5. Запустите сервер:
    ```bash
    npm start
+
+### Пример использования:
+    Запрос на конвертацию видеофайла:
+1. Отправьте POST-запрос на эндпоинт /api/videos/convert с телом запроса:
+   ```json
+   {
+  "videoId": "your-google-drive-video-id",
+  "clientKey": "your-client-key",
+  "fileName": "output-file-name"
+   }
+
+2. Сервер добавит задание на конвертацию в очередь и вернёт статус:
+   ```json
+   {
+  "message": "Video is being processed"
+   }
+
+3. Ответ по завершению конверсии:
+    После завершения конверсии видео будет загружено в Yandex.Cloud, и вы получите ссылку на скачивание mp3 файла в виде лога или через механизмы нотификации.
+
+### Настройка Yandex Cloud
+
+Чтобы настроить Object Storage в Yandex.Cloud:
+
+Создайте бакет в Yandex Object Storage.
+Получите accessKey и secretKey для вашего бакета.
+Добавьте эти ключи в файл .env.
