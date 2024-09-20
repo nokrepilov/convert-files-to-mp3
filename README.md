@@ -50,18 +50,18 @@
     Запрос на конвертацию видеофайла:
 1. Отправьте POST-запрос на эндпоинт /api/videos/convert с телом запроса:
    ```json
-{
-  "videoId": "your-google-drive-video-id",
-  "clientKey": "your-client-key",
-  "fileName": "output-file-name"
-}
+        {
+        "videoId": "your-google-drive-video-id",
+        "clientKey": "your-client-key",
+        "fileName": "output-file-name"
+        }
    
 
 2. Сервер добавит задание на конвертацию в очередь и вернёт статус:
    ```json
-{
-  "message": "Video is being processed"
-}
+        {
+        "message": "Video is being processed"
+        }
 
 
 3. Ответ по завершению конверсии:
