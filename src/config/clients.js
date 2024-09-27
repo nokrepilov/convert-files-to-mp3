@@ -5,5 +5,6 @@ const clients = {
 };
 
 export const authenticateClient = (clientKey) => {
-  return clients[clientKey] || null;
+  // Проверяем, есть ли переданный clientKey в объекте clients
+  return Object.keys(clients).includes(clientKey);
 };

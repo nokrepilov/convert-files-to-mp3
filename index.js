@@ -1,6 +1,6 @@
 /* Точка входа приложения */
 import express from 'express';
-import videoRoutes from './routes/videoRoutes.js';
+import videoRoutes from './src/routes/videoRoutes.js';
 
 const app = express();
 app.use(express.json());
